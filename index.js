@@ -95,7 +95,7 @@ window.onload = function () {
     );
   }
 
-  document.ontouchmove = function (e) {
+  canvas.ontouchmove = function (e) {
     player_ball.y = e.touches[0].clientY;
     player_ball.x = e.touches[0].clientX;
   };
