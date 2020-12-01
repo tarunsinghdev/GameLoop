@@ -85,7 +85,7 @@ window.onload = function () {
     var vy = ydir * Math.floor(4 + Math.random() * 5);
     enemy_balls[i] = new ball(
       canvas.width - 50,
-      50 + Math.random() * 50,
+      50 + i * 50,
       vx,
       vy,
       -1,
@@ -135,16 +135,8 @@ window.onload = function () {
       // if a collision occurs, flip both ball's velocities
       if (distance < enemy_balls[i].radius + player_ball.radius) {
         hits++;
-        enemy_balls[i] = enemy_balls[i] = new ball(
-          canvas.width - 50,
-          50 + Math.random() * 50,
-          vx,
-          vy,
-          -1,
-          -1,
-          25,
-          'red'
-        );
+        enemy_balls[i].x = canvas.width - 50;
+        enemy_balls[i].y = 50 + Math.random() * 100;
       }
     }
 
