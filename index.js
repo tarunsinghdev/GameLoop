@@ -95,7 +95,7 @@ window.onload = function () {
     );
   }
 
-  canvas.ontouchmove = function (e) {
+  document.ontouchmove = function (e) {
     player_ball.y = e.touches[0].clientY;
     player_ball.x = e.touches[0].clientX;
   };
@@ -165,7 +165,7 @@ window.onload = function () {
     // draw the hits to the screen in the top-left corner
     c.font = '20px serif';
     c.fillText('Hits: ' + hits, 5, 20);
-    c.fillText('Left Canvas Hits: ' + hits_leftcanvas, 5, 50);
+    c.fillText('Left Border Hits: ' + hits_leftcanvas, 5, 50);
   }
 
   // game loop runs every 30 milliseconds
