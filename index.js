@@ -96,6 +96,7 @@ window.onload = function () {
   }
 
   canvas.ontouchmove = function (e) {
+    player_ball.boundary_check();
     player_ball.y = e.touches[0].clientY;
     player_ball.x = e.touches[0].clientX;
   };
