@@ -96,8 +96,8 @@ window.onload = function () {
   }
 
   document.ontouchmove = function (e) {
-    player_ball.y = e.touches[0].screenY;
-    player_ball.x = e.touches[0].screenX;
+    player_ball.y = e.touches[0].clientY;
+    player_ball.x = e.touches[0].clientX;
   };
 
   // change the direction of the ball based on the arrow key input
